@@ -66,10 +66,10 @@ async def hei(ctx):
 
 
 @bot.command()
-async def rizz(ctx):
+async def kysy(ctx):
     vastaukset = []
     # Lue vastaukset tiedostosta
-    with open('rizz.txt', 'r', encoding='utf-8') as f:
+    with open('kysy.txt', 'r', encoding='utf-8') as f:
         vastaukset = f.readlines()
     
     # Valitse satunnainen vastaus
