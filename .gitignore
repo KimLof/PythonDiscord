@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+rizz.txt
+voice_time_log.txt
+config.py
+
 # Distribution / packaging
 .Python
 build/
