@@ -1,54 +1,53 @@
-# Discord Bot -projekti
+# Discord Bot Project
 
-Tämä on yksinkertainen Discord-botti, joka tarjoaa perustoimintoja, kuten käyttäjien puhekanavilla viettämän ajan seurannan ja satunnaisvastausten antamisen käyttäjien kysymyksiin.
+This is a simple Discord bot that provides basic functionalities such as tracking the time users spend in voice channels and giving random responses to users' questions.
 
-## Käyttöönotto
+## Setup
 
-Seuraavat ohjeet auttavat sinua saamaan botin toimimaan Discord-palvelimellasi.
+The following instructions will help you get the bot running on your Discord server.
 
-### Edellytykset
+### Prerequisites
 
-- Python 3.6 tai uudempi
-- discord.py-kirjasto
-- Pythonin `dotenv`-kirjasto ympäristömuuttujien käsittelyyn (valinnainen)
+- Python 3.6 or higher
+- discord.py library
+- Python `dotenv` library for handling environment variables (optional)
 
-### Asennus
+### Installation
 
-1. Kloonaa repositorio koneellesi.
+1. Clone the repository to your machine.
     ```bash
     git clone https://github.com/KimLof/PythonDiscord.git
     ```
 
-2. Asenna tarvittavat Python-kirjastot.
+2. Install the required Python libraries.
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Luo `config.py`-tiedosto projektin juureen ja lisää siihen Discord-bot-tokenisi. Alempana lisää tietoa tästä kohdassa 2.
+3. Create a `config.py` file in the root of the project and add your Discord bot token to it. More information on this in step 2 below.
     ```plaintext
-    TOKEN = SinunBotTokenisiTähän
+    TOKEN = YourBotTokenHere
     ```
 
-4. Käynnistä botti.
+4. Run the bot.
     ```bash
     python bot.py
     ```
 
-### Botin lisääminen Discord-palvelimelle
+### Adding the Bot to a Discord Server
 
-1. Mene Discord Developer -portaaliin ja luo uusi sovellus.
-2. Luo bot-käyttäjä sovelluksellesi ja kopioi bot-token.
-3. Luo OAuth2 URL "OAuth2 URL Generator" -työkalulla. Valitse "bot" skoopiksi ja määritä tarvittavat oikeudet.
-4. Avaa generoitu URL selaimessasi ja lisää botti haluamallesi Discord-palvelimelle.
+1. Go to the Discord Developer portal and create a new application.
+2. Create a bot user for your application and copy the bot token.
+3. Create an OAuth2 URL using the "OAuth2 URL Generator" tool. Choose "bot" as the scope and define the necessary permissions.
+4. Open the generated URL in your browser and add the bot to your desired Discord server.
 
-## Komennot
+## Commands
 
-Bot tukee seuraavia komentoja:
+The bot supports the following commands:
 
-- `!hei`: Bot vastaa tervehdyksellä.
-- `!kysy`: Bot antaa satunnaisen vastauksen määritellystä tiedostosta.
-- `!aika`: Näyttää, kuinka kauan olet ollut nykyisellä puhekanavalla.
-- `!kokonaisaika`: Näyttää kokonaisajan, jonka olet viettänyt puhekanavilla.
+- `!hello`: Bot responds with a greeting.
+- `!ask`: Bot gives a random response from a predefined file.
+- `!time`: Shows how long you have been in the current voice channel.
+- `!totaltime`: Shows the total time you have spent in voice channels.
 
-`!kysy` tarvitsee juuteen kysy.txt tiedoston. Sinne voi lisätä vastauksia erotellen rivinvaihdolla. Botti valitsee satunnaisesti niistä yhden vastauksen kun `!kysy` kutsutaan.
-
+The `!ask` command requires a `ask.txt` file in the root. You can add responses there, each separated by a new line. The bot will randomly choose one of them when `!ask` is called.
